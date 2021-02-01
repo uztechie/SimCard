@@ -1,0 +1,4 @@
+include ':SimcardManager'
+include ':DualSimCard'
+include ':app'
+rootProject.name = "SimCard"

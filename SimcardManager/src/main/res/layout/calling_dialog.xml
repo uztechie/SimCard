@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:padding="10dp"
+    style="@style/dialog_rounded"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/calling_dialog_title"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sim_kartani_tanlang"
+        android:textSize="20sp"
+        android:textColor="@color/dark"/>
+
+    <LinearLayout
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/sim1" />
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:id="@+id/calling_dialog_sim1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sim1"
+            android:textColor="@color/sim1"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/sim2" />
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:id="@+id/calling_dialog_sim2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sim2"
+            android:textColor="@color/sim2"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+
+</LinearLayout>
