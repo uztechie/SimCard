@@ -164,8 +164,11 @@ public class SimCard extends AppCompatActivity {
             ussd = ussd.replace("#", Uri.encode("#"));
             uri = Uri.parse("tel:" + ussd + Uri.encode("#"));
         }
-        else {
+        else if (ussd.contains("*")){
             uri = Uri.parse("tel:" + ussd + Uri.encode("#"));
+        }
+        else {
+            uri = Uri.parse("tel:" + ussd);
         }
 
         Intent intent = new Intent("android.intent.action.CALL");
