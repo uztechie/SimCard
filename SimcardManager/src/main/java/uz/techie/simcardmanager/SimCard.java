@@ -14,6 +14,7 @@ import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -104,8 +105,11 @@ public class SimCard extends AppCompatActivity {
                     ussd = ussd.replace("#", Uri.encode("#"));
                     uri = Uri.parse("tel:" + ussd + Uri.encode("#"));
                 }
-                else {
+                else if (ussd.contains("*")){
                     uri = Uri.parse("tel:" + ussd + Uri.encode("#"));
+                }
+                else {
+                    uri = Uri.parse("tel:" + ussd);
                 }
 
                 Intent intent = new Intent("android.intent.action.CALL");
@@ -170,6 +174,7 @@ public class SimCard extends AppCompatActivity {
         else {
             uri = Uri.parse("tel:" + ussd);
         }
+
 
         Intent intent = new Intent("android.intent.action.CALL");
         intent.setData(uri);intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
